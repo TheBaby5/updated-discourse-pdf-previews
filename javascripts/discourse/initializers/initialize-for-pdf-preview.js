@@ -7,11 +7,6 @@ export default {
   name: "pdf-previews",
   initialize(container) {
     withPluginApi((api) => {
-      const site = container.lookup("service:site");
-      if (site.mobileView) {
-        return;
-      }
-
       try {
         const previewModeSetting = settings.preview_mode;
         const newTabIcon = () => {
@@ -49,7 +44,12 @@ export default {
         };
 
         api.decorateCookedElement(
-          (post) => {
+          (post, helper) => {
+            const site = helper?.widget?.site || container.lookup("service:site");
+            if (site?.mobileView) {
+              return;
+            }
+
             const attachments = [...post.querySelectorAll(".attachment")];
 
             const pdfs = attachments.filter((attachment) =>
