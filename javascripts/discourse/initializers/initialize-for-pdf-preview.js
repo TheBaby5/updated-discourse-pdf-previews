@@ -44,8 +44,8 @@ export default {
         };
 
         api.decorateCookedElement(
-          (post, helper) => {
-            const site = helper?.widget?.site || container.lookup("service:site");
+          (post) => {
+            const site = container.lookup("service:site");
             if (site?.mobileView) {
               return;
             }
