@@ -1,4 +1,4 @@
-# 1Hack Discourse PDF Previews
+# Discourse PDF Previews (Updated)
 
 > Forked from [discourse/discourse-pdf-previews](https://github.com/discourse/discourse-pdf-previews)
 
@@ -12,13 +12,6 @@ Displays PDF attachments as inline previews in posts instead of plain download l
 - **New Tab Mode**: Adds icon, opens PDF in new tab on click
 - **Mobile**: Automatically disabled on mobile devices
 - **Per-file override**: Start filename with space to force "New Tab" mode
-
-## Installation
-
-**Admin > Customize > Themes > Install > From Git:**
-```
-https://github.com/TheBaby5/1Hack-discourse-pdf-previews.git
-```
 
 ## Settings
 
